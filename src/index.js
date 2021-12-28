@@ -25,8 +25,8 @@ window.onload = function () {
       modified: createEditorModel(this.modified),
     });
     const navi = monaco.editor.createDiffNavigator(diffEditor, {
-      followsCaret: true, // resets the navigator state when the user selects something in the editor
-      ignoreCharChanges: true, // jump from line to line
+      followsCaret: true,
+      ignoreCharChanges: true,
     });
 
     window.setInterval(function () {
@@ -36,9 +36,6 @@ window.onload = function () {
 
   init();
 
-  const dataBtn = document.getElementById('dataBtn');
-  const urlInput = document.getElementById('urlInput');
-  const iframe = document.getElementById('currentif');
   const jsonTextarea = document.getElementById('jsonTextarea');
   const parseJsonBtn = document.getElementById('parseJson');
   const uploadInput = document.getElementById('j-upload-input');
@@ -56,6 +53,10 @@ window.onload = function () {
 
   // 格式化json数据
   parseJsonBtn.onclick = function () {
+    // 测试请求
+    fetch(
+      '/api/hj/welfare/queryactivitycommconfig?param={%22key%22:[%22HJDATA_PRE_NAVIGATE_CONFIG%22]}',
+    );
     const jsonStringVal = jsonTextarea.value;
     const jsonFormatVal = parseJson(jsonStringVal);
     updateEditorValue(jsonFormatVal);
@@ -70,10 +71,5 @@ window.onload = function () {
       var fileString = evt.target.result;
       updateEditorValue(null, fileString);
     };
-  };
-
-  dataBtn.onclick = function () {
-    const url = urlInput.value;
-    iframe.src = url;
   };
 };
