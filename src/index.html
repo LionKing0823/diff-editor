@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>diff-editor</title>
+  </head>
+  <link rel="stylesheet" type="text/css" href="./index.css" />
+  <body>
+    <main class="main">
+      <!-- <input id="urlInput" />
+      <button id="dataBtn">获取数据</button> -->
+      <section class="top-action">
+        <div class="left-check">
+          <textarea rows="10" cols="50" id="jsonTextarea"></textarea>
+          <button id="parseJson" class="primary-btn">格式化json数据</button>
+        </div>
+        <div class="right-check">
+          <span class="upload normal-btn">
+            上传本地json文件
+            <input type="file" id="j-upload-input" name="upload" />
+          </span>
+          <button id="check" class="primary-btn">解析</button>
+        </div>
+      </section>
+
+      <div id="container" style="height: 100%; width: 100%"></div>
+      <!-- <iframe id="currentif" /> -->
+    </main>
+  </body>
+  <script src="./index.js"></script>
+</html>

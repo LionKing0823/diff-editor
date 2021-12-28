@@ -1,0 +1,61 @@
+.main {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.top-action {
+  display: flex;
+  align-items: center;
+  margin: 16px 24px;
+}
+
+.left-check,
+.right-check {
+  margin-right: 16px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.primary-btn {
+  height: 32px;
+  background-color: #0064c8;
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+  margin-left: 4px;
+  cursor: pointer;
+}
+
+.normal-btn {
+  height: 32px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #000;
+  border-radius: 4px;
+  margin-left: 4px;
+  cursor: pointer;
+}
+
+.upload {
+  height: 150px;
+  width: 400px;
+  line-height: 150px;
+  text-align: center;
+  background-color: #fff;
+  border: 1px dashed #ccc;
+  color: #686868;
+  margin-left: 4px;
+  cursor: pointer;
+  position: relative;
+}
+
+.upload input {
+  opacity: 0.5;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  cursor: pointer;
+}
